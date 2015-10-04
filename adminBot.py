@@ -136,11 +136,6 @@ def listener(messages):
  
 bot.set_update_listener(listener)
  
-############################################
-#                 POLLING                  #
-############################################
- 
-bot.polling(none_stop=True, block=False)
  
 ############################################
 #                 COMANDOS                 #
@@ -184,8 +179,7 @@ def command_z4(m):
         bot.reply_to( m, 'https://telegram.me/group_admin_bot?start=enlaces')
  
 ############################################
-#               BUCLE FINAL                #
+#                 POLLING                  #
 ############################################
  
-while True:
-    time.sleep(300)
+bot.polling(none_stop=True)
