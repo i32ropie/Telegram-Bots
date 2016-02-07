@@ -9,14 +9,14 @@ admin = Your_ID
 if exists(wc_file_name):
   with open(wc_file_name) as f:
     wc_txt = f.read()
-  if not wc_text:
+  if not wc_txt:
     wc_txt = 'Custom welcome message.'
     with open(wc_file_name,'w') as f:
-      f.write(wc_text)
+      f.write(wc_txt)
 else:
   wc_txt = 'Custom welcome message.'
   with open(wc_file_name,'w') as f:
-      f.write(wc_text)
+      f.write(wc_txt)
 
 bot = telebot.TeleBot(token)
 
@@ -38,7 +38,7 @@ def wc(m):
     else:
       wc_txt = ' '.join(m.text.split()[1:])
       with open(wc_file_name,'w') as f:
-        f.write(wc_text)
+        f.write(wc_txt)
       bot.send_message(cid, "Mensaje de bienvenida actualizado")
 
 bot.polling(True)
