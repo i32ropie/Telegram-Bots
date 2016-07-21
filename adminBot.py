@@ -12,6 +12,7 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
  
 TOKEN = '<TOKEN>'
+botname = '<YOUR BOT USERNAME>'
  
 grupo = <ID Grupo>
  
@@ -158,25 +159,25 @@ def command_start(m):
 def command_z1(m):
     cid = m.chat.id
     if cid == grupo:
-        bot.reply_to( m, 'https://telegram.me/group_admin_bot?start=normas')
+        bot.reply_to( m, 'https://telegram.me/{}?start=normas'.format(botname))
  
 @bot.message_handler(commands=['info'])
 def command_z2(m):
     cid = m.chat.id
     if cid == grupo:
-        bot.reply_to( m, 'https://telegram.me/group_admin_bot?start=info')
+        bot.reply_to( m, 'https://telegram.me/{}?start=info'.format(botname))
    
 @bot.message_handler(commands=['bots'])
 def command_z3(m):
     cid = m.chat.id
     if cid == grupo:
-        bot.reply_to( m, 'https://telegram.me/group_admin_bot?start=bots')
+        bot.reply_to( m, 'https://telegram.me/{}?start=bots'.format(botname))
  
 @bot.message_handler(commands=['enlaces'])
 def command_z4(m):
     cid = m.chat.id
     if cid == grupo:
-        bot.reply_to( m, 'https://telegram.me/group_admin_bot?start=enlaces')
+        bot.reply_to( m, 'https://telegram.me/{}?start=enlaces'.format(botname))
  
 ############################################
 #                 POLLING                  #
